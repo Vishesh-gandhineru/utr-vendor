@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/CustomUi/LoginCard.tsx", "components/CustomUi/PhoneWithCountryCode.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/CustomUi/LoginCard.tsx", "components/CustomUi/PhoneWithCountryCode.tsx", "components/CustomUi/LoginForm.tsx"],
   "exclude": ["node_modules"]
 }

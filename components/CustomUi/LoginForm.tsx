@@ -22,7 +22,7 @@ export default function LoginForm() {
         "countryCode":countryCode,
         "role": "user"
     }
- function handleSubmit(e) {
+ function handleSubmit(e : Event) {
     e.preventDefault();
     console.log(body);
     // postLoginWithOTP(body , setIsLoading , setError , setSuccess);
@@ -30,34 +30,29 @@ export default function LoginForm() {
 
 
 
-function handleOnChange(e){    
-    if (e.target.name === "countryCode"){
-        setCountryCode(e.target.value);
-        return;
-    }
-    if(e.target.name === "phone"){
+function handleOnChange(e){       
+  
         setPhone(e.target.value);
-        return;
-    }
+       
 }
 
-function OtpSubmit(data) {
-  const OtpBody = {...body , "otp": data.pin}
-  console.log(OtpBody);
-  // verifyOTP(OtpBody , setOtpVerified);
-}
+// function OtpSubmit(data) {
+//   const OtpBody = {...body , "otp": data.pin}
+//   console.log(OtpBody);
+//   // verifyOTP(OtpBody , setOtpVerified);
+// }
 
 
   return (
     <section>
     {isLoading && <p>Loading...</p>}
-    {!success ? <form className="flex justify-center items-center gap-3" onSubmit={handleSubmit}>
+    {!success ? <form className="flex flex-col justify-center items-center gap-3" onSubmit={handleSubmit}>
       <div className="flex">
         <PhoneWithCountryCode  setCountryCode={setCountryCode}/>
-        <Input type="number" placeholder="phone number" name="phone" className="w-[100%] rounded-l-none  " value={phone} onChange={handleOnChange} disabled={!isLoading ? false : true } />
+        <Input type="number"  placeholder="phone number" name="phone" className="w-[100%] rounded-l-none" value={phone} onChange={handleOnChange} disabled={!isLoading ? false : true } />
       </div>
 
-      <Button type="submit">Login</Button>
+      <Button type="submit" className="w-full">Login</Button>
     </form> : null
     // <OtpComponent body={body} OtpSubmit={OtpSubmit} OtpVerified={OtpVerified} />
     }

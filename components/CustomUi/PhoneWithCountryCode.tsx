@@ -25,7 +25,7 @@ import { CountryCode } from "@/lib/CountryCodeWithImage"
 
 const frameworks = CountryCode;
 
-export function PhoneWithCountryCode({setCountryCode}) {
+export function PhoneWithCountryCode({setCountryCode}:any) {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("+91")
 
@@ -60,6 +60,7 @@ export function PhoneWithCountryCode({setCountryCode}) {
                   setValue(currentValue === value ? "" : framework.dial_code || "")
                   setCountryCode(currentValue === value ? "" : framework.dial_code || "")
                   setOpen(false)
+
                 }}
               >
                 <div className="flex justify-between items-center w-full px-2">
