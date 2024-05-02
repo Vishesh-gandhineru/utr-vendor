@@ -3,7 +3,7 @@ import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Separator } from "../ui/separator"
 
-export default function Component() {
+export default function CustomerProfileCard() {
   return (
     <Card className="w-full max-w-md">
       <CardHeader className="flex items-center gap-4">

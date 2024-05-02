@@ -11,6 +11,9 @@ const pastBooking = () => {
         <BookingCard completed={true} cancelled={false} upcoming={false} />
         <BookingCard completed={true} cancelled={false} upcoming={false} />
         <BookingCard cancelled={true} completed={false} upcoming={false} />
+        <BookingCard cancelled={true} completed={false} upcoming={false} />
+        <BookingCard cancelled={true} completed={false} upcoming={false} />
+        <BookingCard cancelled={true} completed={false} upcoming={false} />
        
       </section>
     </DashboardLayout>
