@@ -1,5 +1,5 @@
 import DashboardLayout from "@/components/DashboardComponents/DashBoardLayout"
-import CustomerProfileCard from "@/components/CustomerComponents/customerProfileCard"
+import CustomerProfileCard from "@/components/CustomerComponents/CustomerProfileCard"
 
 const customers = () => {
   return (

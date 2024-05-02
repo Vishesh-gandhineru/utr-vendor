@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
+import { JSX, SVGProps } from "react"
 
 export default function VandorProfile() {
   return (
@@ -103,7 +104,7 @@ export default function VandorProfile() {
             <div className="grid grid-cols-[minmax(100px,_1fr)_2fr] items-center gap-4">
               <Label htmlFor="language">Language</Label>
               <div className="flex items-center gap-2">
-                <Select defaultValue="en" id="language">
+                <Select defaultValue="en" >
                   <option value="en">English</option>
                   <option value="es">Español</option>
                   <option value="fr">Français</option>
@@ -118,7 +119,7 @@ export default function VandorProfile() {
             <div className="grid grid-cols-[minmax(100px,_1fr)_2fr] items-center gap-4">
               <Label htmlFor="timezone">Timezone</Label>
               <div className="flex items-center gap-2">
-                <Select defaultValue="America/New_York" id="timezone">
+                <Select defaultValue="America/New_York">
                   <option value="America/New_York">Eastern Time (US & Canada)</option>
                   <option value="America/Los_Angeles">Pacific Time (US & Canada)</option>
                   <option value="Europe/London">London</option>
@@ -147,7 +148,7 @@ export default function VandorProfile() {
   )
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -167,7 +168,7 @@ function CheckIcon(props) {
 }
 
 
-function MoveVerticalIcon(props) {
+function MoveVerticalIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
