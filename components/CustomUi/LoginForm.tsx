@@ -1,7 +1,7 @@
 "use client";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import {  useState } from "react";
+import {  FormEvent, useState } from "react";
 // import { postLoginWithOTP } from "@/app/_util/LoginAPI";
 // import OtpComponent from "./OTPComponent";
 import { PhoneWithCountryCode } from "./PhoneWithCountryCode";
@@ -30,7 +30,7 @@ export default function LoginForm() {
 
 
 
-function handleOnChange(e){       
+function handleOnChange(e : any){       
   
         setPhone(e.target.value);
        
@@ -46,13 +46,13 @@ function handleOnChange(e){
   return (
     <section>
     {isLoading && <p>Loading...</p>}
-    {!success ? <form className="flex flex-col justify-center items-center gap-3" onSubmit={handleSubmit}>
+    {!success ? <form className="flex flex-col justify-center items-center gap-3">
       <div className="flex">
         <PhoneWithCountryCode  setCountryCode={setCountryCode}/>
         <Input type="number"  placeholder="phone number" name="phone" className="w-[100%] rounded-l-none" value={phone} onChange={handleOnChange} disabled={!isLoading ? false : true } />
       </div>
 
-      <Button type="submit" className="w-full">Login</Button>
+      <Button type="submit" className="">Login</Button>
     </form> : null
     // <OtpComponent body={body} OtpSubmit={OtpSubmit} OtpVerified={OtpVerified} />
     }
